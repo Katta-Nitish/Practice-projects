@@ -3,7 +3,7 @@ from PIL import Image
 from io import BytesIO
 import requests
 response=requests.get("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKAamECE8Hro_r6Cu1ShDICQ2aEqamvRSfgA&s")
-st.title("IBM Calculator")
+st.title("BMI Calculator")
 img=Image.open(BytesIO(response.content))
 st.image(img,width=200)
 weight=st.number_input("Enter your weight here(in kg):",min_value=0.0,format="%.2f")
